@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+:root {
+  font-size: 16px;
+}
+img {
+  object-fit: cover;
+}
+body {
+  background: #6441A5;
+  background: linear-gradient(315deg, #2a0845, #6441A5);
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+input {
+  padding:.6rem 1rem;
+  background-color: #ddd;
+  border:none;
+  width: 300px;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  margin-bottom:1.5rem;
+  font-family: inherit;
+}
+input::placeholder {
+  font-size: .9rem;
+}
+.card {
+  background-color: #2a0845;
+  background: linear-gradient(100deg, #2a0845 0%, #411563 70%);
+  padding:2.5rem 3rem;
+  display: grid;
+  width: 80%;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 172, 201, 0.3);
+  /* align-items: center; */
+  flex-wrap: wrap;
+}
+.image-div {
+  margin-right: 1.5rem;
+  align-self: center;
+  grid-column: 1 / 3;
+}
+.user-content {
+  grid-column: 3/ -1;
+}
+.image-div .avatar {
+  width: 100%;
+  border-radius: 50%;
+  border: 5px solid #411563;
+}
+.user-content h2 {
+  color: white;
+  letter-spacing: .1rem;
+}
+.user-content p.id {
+  font-size: 0.7rem;
+  color:chocolate;
+  margin-bottom: 1rem;
+}
+.user-content p.bio {
+  color: #ccc;
+  margin: .5rem 0;
+  font-size: .85rem;
+}
+.user-content .info {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  color:#ddd;
+  width: 85%;
+  padding:0;
+  margin:1rem 0;
+}
+.user-content .info li {
+  color:wheat;
+}
+.user-content .info li strong {
+  font-size: .8rem;
+  margin-right: .2rem;
+  color:#bbb;
+}
+.repos {
+  width: 100%;
+  grid-column: 1 / -1;
+  margin: 1.5rem;
+}
+.repos {
+  padding:.5rem 0;
+  margin:0;
+}
+.repos-header {
+  color: white;
+  margin: .5rem 0;
+}
+.repos a {
+  display: inline-block;
+  margin: .3rem .6rem;
+  color: wheat;
+  font-size: .85rem;
+  text-decoration: none;
+  padding: .1rem .4rem;
+  background-color: #6441A5;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 630px) {
+  .card {
+    width: 97%;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  :root {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  body {
+    margin: 2rem 0;
+  }
+  input {
+    margin-bottom: .8rem;
+  }
+  .image-div {
+    grid-column: 1 / -1;
+    margin:0 auto;
+    width: 200px;
+  }
+  .user-content {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+  .repos, .repos-header {
+    text-align: center;
+    grid-column: 1 / -1;
+  }
+}
